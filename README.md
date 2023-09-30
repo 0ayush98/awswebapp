@@ -1,27 +1,45 @@
-# App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Local Development with Git
 
-## Development server
+Start development on your local system.
+Use Git for version control to track changes.
+Angular Web App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Develop your web app using Angular.
+Frontend-Backend Connection
 
-## Code scaffolding
+Inside your Angular project, maintain a 'deploy' folder.
+This folder connects the frontend to an Express backend server running on port 3000.
+GitHub Repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Push your code to a GitHub repository named 'awswebapp' for centralized version control.
+AWS CodeBuild
 
-## Build
+Configure AWS CodeBuild.
+Set GitHub as the source for your builds.
+Create a buildspec.yml file to define build, post-build, and artifact storage actions.
+Build and Artifact Storage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+AWS CodeBuild compiles your code successfully.
+The resulting 'dist' folder contains the build artifacts.
+These artifacts are packaged and stored in an S3 storage bucket.
+Deployment Environment
 
-## Running unit tests
+Create a deployment environment using AWS Elastic Beanstalk.
+AWS CodePipeline Integration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Integrate Git, AWS CodeBuild, and AWS Elastic Beanstalk using AWS CodePipeline.
+Changes in your local Git repository trigger the CodePipeline.
+Automated Deployment
 
-## Running end-to-end tests
+When changes occur, CodePipeline builds the app using CodeBuild.
+The updated application is then deployed to the Elastic Beanstalk environment.
+Continuous Integration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Achieve a fully automated flow for Angular web app development.
+Changes made to your local Git repository are automatically reflected in the deployed application.
+This flow ensures efficient development, version control, and automated deployment of your Angular web application. It's a well-structured process for collaborative and continuous development.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
